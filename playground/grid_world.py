@@ -978,7 +978,7 @@ def sarsa_approx_run():
 
 
 
-env = GridWorld("grid.txt")
+env = GridWorld("../grid.txt")
 env.print_map()
 
 sarsa_approx_run()

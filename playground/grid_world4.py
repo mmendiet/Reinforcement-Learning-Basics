@@ -429,7 +429,7 @@ def sarsa_approx_run():
     plt.show()
 
 np.set_printoptions(suppress=True)
-env = GridWorld("grid.txt")
+env = GridWorld("../grid.txt")
 env.print_map()
 
 sarsa_approx_run()
