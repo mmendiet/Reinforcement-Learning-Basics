@@ -63,7 +63,7 @@ def dp_policy_creation():
     return policy
 
 def dp_run():
-    #******************* DP ********************************
+    #******************* DP *******************************
     policy = dp_policy_creation()
     np.set_printoptions(suppress=True)
     for i in range(0,100):

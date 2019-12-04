@@ -83,7 +83,7 @@ def my_policy(state, Q, e):
     return action
 
 def sarsa_run(steps):
-    #******************* SARSA ********************************
+    #******************* SARSA *******************************
     value_function = defaultdict(float)
     start = time.time()
     Q_function , all_reward = sarsa_controlN(num_episodes=500, gamma=0.9, n=steps)

@@ -133,8 +133,8 @@ def mc_control(num_episodes,e=0.1, gamma=0.9, lr=0.1):
             step_count += 1
     return Q
 
-    def mc_run():
-    #******************* MC ********************************
+def mc_run():
+    #******************* MC *******************************
     #value_function = mc_pred(num_episodes=1, gamma=0.99)
     value_function = defaultdict(float)
     Q_function = mc_control(num_episodes=2000, gamma=0.99)

@@ -8,9 +8,7 @@ from collections import defaultdict
 import random
 
 def plot_value_function(V, title="Value Function", scale_vmin=0):
-    """
-    Plots the value function as a surface plot.
-    """
+
     min_x = min(k[0] for k in V.keys())
     max_x = max(k[0] for k in V.keys())
     min_y = min(k[1] for k in V.keys())
@@ -44,6 +42,7 @@ def plot_value_function(V, title="Value Function", scale_vmin=0):
     plot_surface(X, Y, Z_noace, "{}".format(title), vmin, vmax)
 
 def printing_policy(policy, value_function):
+    #TODO include env as argument for use as util
     print_policy = np.zeros((env._size[0],env._size[1]))
     print_value = np.zeros((env._size[0],env._size[1]))
     for row in range(0, env._size[0]):

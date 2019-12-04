@@ -9,6 +9,17 @@ import random
 from GridWorld import *
 from utils import *
 
+def my_policy(state, Q, e):
+    #action = random.randint(0,3)
+    choice = np.random.choice(2, p=[e, 1-e])
+    if choice:
+        #greedy
+        action = np.argmax(Q[state])
+    else:
+        #random
+        action = np.random.randint(len(env._actions))
+    return action
+
 def td_pred(num_episodes, gamma=0.9):
     sequence_state_counter = defaultdict(float)
     value_function = defaultdict(float)

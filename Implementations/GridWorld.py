@@ -7,6 +7,7 @@ import sys
 from collections import defaultdict
 import random
 
+#This grid_world environment is from the following: https://nbviewer.jupyter.org/url/webpages.uncc.edu/mlee173/teach/itcs6010/notebooks/assign/Assign1.ipynb
 class GridWorld:
     """ Grid World environment
             there are four actions (left, right, up, and down) to move an agent
