@@ -455,7 +455,7 @@ def mc_run():
     #******************* MC ********************************
     #value_function = mc_pred(num_episodes=1, gamma=0.99)
     value_function = defaultdict(float)
-    Q_function = mc_control(num_episodes=2000, gamma=0.99)
+    Q_function = mc_control(num_episodes=3000, gamma=0.99)
     print_value = np.zeros((env._size[0],env._size[1]))
     for state, actions in Q_function.items():
         action_value = np.max(actions)
@@ -981,7 +981,7 @@ def sarsa_approx_run():
 env = GridWorld("../grid.txt")
 env.print_map()
 
-sarsa_approx_run()
+mc_run()
 
 # top-left to (0,0)
 def coord_convert(s, sz):
